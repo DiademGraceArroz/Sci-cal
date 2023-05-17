@@ -1,3 +1,5 @@
+// SHUNTING YARD ALGORITHM
+
 import Stack from "./stack";
 import InfixTokenizer from "@psse-cpu/tokenizer";
 import readlineSync from "readline-sync";
@@ -75,7 +77,7 @@ while (tokens.hasMoreTokens()) {
     if (powerOperator.sign === token) {
       // set token precedence using operator.precedence
       tokenPrecedence = powerOperator.precedence;
-      // set token assiciativity using operator.associativity
+      // set token associativity using operator.associativity
       tokenAssociativity = powerOperator.associativity;
     } else if (multiplicationOperator.sign === token) {
       tokenPrecedence = multiplicationOperator.precedence;
